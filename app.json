@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "emilio",
+    "slug": "emilio",
+    "scheme": "emilio",
+    "plugins": [
+      "expo-router"
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "web": {
+      "bundler": "metro"
+    }
+  }
+}
