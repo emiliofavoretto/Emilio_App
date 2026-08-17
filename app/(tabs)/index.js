@@ -49,7 +49,12 @@ export default function HomeScreen() {
 
                     <Link href="/modal" asChild>
                         <Pressable style={styles.button}>
-                            <Text style={styles.buttonText}>Abrir modal de exemplo</Text>
+                            <Text style={styles.buttonText}>Projetos feitos por mim</Text>
+                        </Pressable>
+                    </Link>
+                    <Link href="/modal" asChild>
+                        <Pressable style={styles.button}>
+                            <Text style={styles.buttonText}>Entrar em contato</Text>
                         </Pressable>
                     </Link>
                 </View>
@@ -114,6 +119,10 @@ const styles = StyleSheet.create({
         padding: 20,
         borderRadius: 10,
         backgroundColor: '#ffffff',
+        borderRadius: 10,
+        borderStyle: 'solid',
+        borderColor: '#ec9d0a',
+        borderWidth: 2,
     },
     cardTitle: {
         fontSize: 18,
@@ -158,6 +167,6 @@ const styles = StyleSheet.create({
         fontWeight: 500,
         display: 'flex',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
     },
 });
