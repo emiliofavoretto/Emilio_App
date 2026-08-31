@@ -8,7 +8,7 @@ const API_KEY = "cv_hK7LxiDK1cmbhA9-wfiya2Ahe3H1UlRnhlurz3c7vky_tMI_zfcCpUlSyCee
 const api = axios.create({
     baseURL: "https://api-ds.codeverse.dev.br",
     headers: {
-        "x-api-key": API_KEY 
+        "x-api-key": API_KEY
     }
 })
 
