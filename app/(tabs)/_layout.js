@@ -21,13 +21,6 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="aulas"
-        options={{
-          title: "Aulas",
-          headerTitle: "Conteúdo",
-        }}
-      />
-      <Tabs.Screen
         name="post"
         options={{
           title: "Post",
@@ -39,6 +32,13 @@ export default function TabsLayout() {
         options={{
           title: "API",
           headerTitle: "API",
+        }}
+      />
+      <Tabs.Screen
+        name="Delete"
+        options={{
+          title: "Delete",
+          headerTitle: "Delete",
         }}
       />
     </Tabs>
