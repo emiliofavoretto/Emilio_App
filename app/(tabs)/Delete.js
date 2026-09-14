@@ -122,7 +122,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        backgroundColor: 'white',
+        backgroundColor: '#061531',
         borderRadius: 10,
         paddingHorizontal: 16,
         paddingVertical: 14,
@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         borderColor: '#fecdd3',
     },
-    linhaTitulo: { fontSize: 15, fontWeight: '700', color: '#102542', flex: 1, marginRight: 8 },
+    linhaTitulo: { fontSize: 15, fontWeight: '700', color: '#fff5f5', flex: 1, marginRight: 8 },
     botaoDeletar: {
         backgroundColor: '#e11d48',
         paddingHorizontal: 12,
