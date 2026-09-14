@@ -186,6 +186,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 14,
     paddingVertical: 14,
     marginBottom: 8,
+     borderRadius: 10,
+    borderStyle: 'solid',
+    borderColor: '#ec9d0a',
+    borderWidth: 2,
   },
   linhaTitulo: { fontSize: 15, fontWeight: "700", color: "#061531" },
   linhaSeta: { fontSize: 13, color: "#061531", fontWeight: "600" },
@@ -195,9 +199,7 @@ const styles = StyleSheet.create({
 
   rotulo: { fontSize: 13, fontWeight: "600", color: "#061531", marginBottom: 4 },
   campo: {
-    borderWidth: 1,
-    borderColor: "#ec9d0a",
-    borderRadius: 8,
+   
     paddingHorizontal: 12,
     paddingVertical: 10,
     marginBottom: 12,

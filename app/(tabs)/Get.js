@@ -107,25 +107,25 @@ export default function LivrosListaScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+  safeArea: { flex: 1, backgroundColor: "#99e6d9" },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },
-  subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#061531" },
+  subtitulo: { fontSize: 14, color: "#061531", marginTop: 2 },
 
-  rotulo: { fontSize: 13, fontWeight: "600", color: "#334155", marginBottom: 4 },
+  rotulo: { fontSize: 13, fontWeight: "600", color: "#061531", marginBottom: 4 },
   linhaBusca: { flexDirection: "row", gap: 8, alignItems: "center" },
   campo: {
     flex: 1,
-    borderWidth: 1,
-    borderColor: "#cbd5e1",
+    borderWidth: 2,
+    borderColor: "#ec9d0a",
     borderRadius: 8,
     paddingHorizontal: 14,
     paddingVertical: 10,
     backgroundColor: "white",
   },
   botao: {
-    backgroundColor: "#1565c0",
+    backgroundColor: "#061531",
     paddingHorizontal: 20,
     paddingVertical: 12,
     borderRadius: 8,
@@ -146,7 +146,7 @@ const styles = StyleSheet.create({
     overflow: "hidden",
     padding: 12,
     borderWidth: 1,
-    borderColor: "#e2e8f0",
+    borderColor: "#ec9d0a",
   },
   imagem: { width: 88, height: 88, borderRadius: 6 },
   info: { flex: 1, justifyContent: "center", gap: 4 },
