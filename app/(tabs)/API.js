@@ -1,9 +1,9 @@
-import { React, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { View, Text, Image, ActivityIndicator, ScrollView, StyleSheet } from 'react-native';
 import axios from 'axios';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-const API_KEY = 'cv_hK7LxiDK1cmbhA9-wfiya2Ahe3H1UlRnhlurz3c7vky_tMI_zfcCpUlSyCee-8MH';
+const API_KEY = 'cv_yfAetsgLi9GPs488jiq-dBnVXXc0Dt9Ji9KWnFnmj0Sk840t4JDxPEIM1-l9HOLl';
 
 const api = axios.create({
     baseURL: 'https://api-ds.codeverse.dev.br',
@@ -12,7 +12,7 @@ const api = axios.create({
     },
 });
 
-export default function livrosListarScreen() {
+export default function LivrosListarScreen() {
     const [livros, setLivros] = useState([]);
     const [carregando, setCarregando] = useState(true);
     const [erro, setErro] = useState(null);
@@ -24,9 +24,9 @@ export default function livrosListarScreen() {
             const resposta = await api.get('/api/livros', {
                 params: { limit: 50 },
             });
-            setLivros(resposta.data.data);
+            setLivros(resposta.data?.data || []);
         } catch (error) {
-            setErro('Não foi possivel carregar livros');
+            setErro('Não foi possível carregar os livros.');
         } finally {
             setCarregando(false);
         }
@@ -44,24 +44,22 @@ export default function livrosListarScreen() {
                     <Text style={styles.subtitulo}>GET /api/livros</Text>
                 </View>
 
-                {carregando && <ActivityIndicator style={{ marginVertical: 16 }} />}
+                {carregando && <ActivityIndicator size="large" style={{ marginVertical: 16 }} />}
 
                 {erro && <Text style={styles.erro}>{erro}</Text>}
 
                 {!carregando &&
-                    livros.map((livros) => (
-                        <View style={styles.cardBlock}>
-                            <View key={livros.id} style={styles.card}>
+                    livros?.map((livro) => (
+                        <View key={livro.id || livro._id} style={styles.cardBlock}>
+                            <View style={styles.card}>
                                 <Image
-                                    source={{ uri: livros.imageUrl }}
-                                    height={64}
-                                    width={64}
+                                    source={{ uri: livro.imageUrl }}
                                     style={styles.imagem}
                                 />
                                 <View style={styles.info}>
-                                    <Text style={styles.titulo}>{livros.title}</Text>
+                                    <Text style={styles.titulo}>{livro.title}</Text>
                                     <Text style={styles.categoria}>
-                                        {livros.autor} · {`${livros.paginas} páginas`}
+                                        {livro.autor} · {`${livro.paginas} páginas`}
                                     </Text>
                                 </View>
                             </View>
@@ -80,10 +78,10 @@ const styles = StyleSheet.create({
     subtitulo: { fontSize: 14, color: '#061531', marginTop: 2 },
 
     erro: { color: '#c62828', marginTop: 12 },
+    cardBlock: { marginTop: 12 },
     card: {
         flexDirection: 'row',
         gap: 12,
-        marginTop: 12,
         backgroundColor: '#061531',
         borderRadius: 10,
         overflow: 'hidden',

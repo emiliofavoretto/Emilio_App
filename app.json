@@ -4,7 +4,8 @@
     "slug": "emilio",
     "scheme": "emilio",
     "plugins": [
-      "expo-router"
+      "expo-router",
+      "expo-status-bar"
     ],
     "experiments": {
       "typedRoutes": true
