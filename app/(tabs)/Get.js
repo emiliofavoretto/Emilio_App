@@ -44,7 +44,7 @@ export default function LivrosListaScreen() {
     setLivro(null);
 
     try {
-      const resposta = await api.get(`/api/livros/${idLimpo}`);
+      const resposta = await api.get(`/api/livros/${idLimpo}`);                                                                                                                                                                                                                                                                                                                                         /*easter egg*/
       setLivro(resposta.data?.data || resposta.data);
     } catch (e) {
       console.log("Erro na busca por ID:", e.response?.status, e.response?.data || e.message);

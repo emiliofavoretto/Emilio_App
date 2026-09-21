@@ -43,7 +43,6 @@ export default function PostScreen() {
 
             Alert.alert('Sucesso!', `Livro "${resposta.data.title || titulo}" criado com sucesso.`);
 
-            // Limpa os campos
             setTitulo('');
             setAutor('');
             setGenero('');

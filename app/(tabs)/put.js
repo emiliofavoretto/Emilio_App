@@ -26,8 +26,6 @@ export default function LivrosEditarScreen() {
   const [livros, setLivros] = useState([]);
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(null);
-
-  // null = mostra a lista; objeto = mostra o formulário de edição
   const [selecionado, setSelecionado] = useState(null);
 
   const [titulo, setTitulo] = useState("");
@@ -71,7 +69,6 @@ export default function LivrosEditarScreen() {
 
     setSalvando(true);
     try {
-      // Rota corrigida para /api/livros/:id e enviando os campos corretos da API
       const resposta = await api.put(`/api/livros/${selecionado.id}`, {
         title: titulo,
         autor: autor,
@@ -82,7 +79,7 @@ export default function LivrosEditarScreen() {
       Alert.alert("Sucesso!", "Livro atualizado com sucesso!");
 
       setSelecionado(null);
-      buscarLivros(); // recarrega a lista com o dado novo
+      buscarLivros(); 
     } catch (e) {
       Alert.alert(
         "Erro ao atualizar",
